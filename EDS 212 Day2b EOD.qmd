@@ -7,4 +7,58 @@ editor: visual
 library("tidyverse")
 library("palmerpenguins")
 
+```{r}
+eq1 <- function(x){
+  
+  x^2
+
+}
+
+dc_dt <- D(expression(x^2), name="x")
+dc_dt
+
+x <- 3
+eval(dc_dt)
+
+```
+
+```{r}
+eq2 <- expression(2*(3*a+2)^4 - 5)
+
+dc_dt_2 <- D(expr= eq2, name ="a")
+dc_dt_2
+
+a <- 1.2
+eval(dc_dt_2)
+
+
+```
+
+
+```{r}
+library(palmerpenguins)
+data(package='palmerpenguins')
+library(tidyverse)
+penguins <- penguins
+
+
+```
+
+
+```{r}
+ggplot(data=penguins, aes(x=bill_length_mm, y=bill_depth_mm)) + geom_point(aes(color=species))
+```
+
+```{r}
+ggplot(data=penguins, aes(x=flipper_length_mm, y=body_mass_g)) + geom_jitter(aes(color=species))
+```
+
+
+
+
+
+
+
+
+
 
