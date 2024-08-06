@@ -1,0 +1,9 @@
+---
+title: "EDS 212 Day2b EOD"
+format: html
+editor: visual
+---
+
+library("tidyverse")
+library("palmerpenguins")
+
